@@ -36,6 +36,11 @@
 		3A1F947A269052DB0074F4FB /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F9469269052DB0074F4FB /* UIViewController.swift */; };
 		3A1F947B269052DB0074F4FB /* Miscellaneous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F946A269052DB0074F4FB /* Miscellaneous.swift */; };
 		3A1F947C269052DB0074F4FB /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F946B269052DB0074F4FB /* UIStoryboard.swift */; };
+		3A1F94AE269056A40074F4FB /* SetupViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F948F269056A40074F4FB /* SetupViewProtocols.swift */; };
+		3A1F94AF269056A40074F4FB /* SetupViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F9490269056A40074F4FB /* SetupViewRouter.swift */; };
+		3A1F94B0269056A40074F4FB /* SetupViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F9491269056A40074F4FB /* SetupViewInteractor.swift */; };
+		3A1F94B1269056A40074F4FB /* SetupViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F9492269056A40074F4FB /* SetupViewPresenter.swift */; };
+		3A1F94B2269056A40074F4FB /* SetupViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F9493269056A40074F4FB /* SetupViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +75,11 @@
 		3A1F9469269052DB0074F4FB /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		3A1F946A269052DB0074F4FB /* Miscellaneous.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Miscellaneous.swift; sourceTree = "<group>"; };
 		3A1F946B269052DB0074F4FB /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		3A1F948F269056A40074F4FB /* SetupViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewProtocols.swift; sourceTree = "<group>"; };
+		3A1F9490269056A40074F4FB /* SetupViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewRouter.swift; sourceTree = "<group>"; };
+		3A1F9491269056A40074F4FB /* SetupViewInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewInteractor.swift; sourceTree = "<group>"; };
+		3A1F9492269056A40074F4FB /* SetupViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewPresenter.swift; sourceTree = "<group>"; };
+		3A1F9493269056A40074F4FB /* SetupViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,7 @@
 				3A1F9450269052DA0074F4FB /* Enums */,
 				3A1F9464269052DB0074F4FB /* Extensions */,
 				3A1F9453269052DA0074F4FB /* Helpers */,
+				3A1F9482269056A40074F4FB /* Modules */,
 				3A1F94362690523D0074F4FB /* NetworkLayer */,
 				3A1F945A269052DA0074F4FB /* Protocols */,
 				3A1F9460269052DB0074F4FB /* ReuseableComponents */,
@@ -256,6 +267,26 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
+		3A1F9482269056A40074F4FB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3A1F948E269056A40074F4FB /* SetupView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3A1F948E269056A40074F4FB /* SetupView */ = {
+			isa = PBXGroup;
+			children = (
+				3A1F948F269056A40074F4FB /* SetupViewProtocols.swift */,
+				3A1F9490269056A40074F4FB /* SetupViewRouter.swift */,
+				3A1F9491269056A40074F4FB /* SetupViewInteractor.swift */,
+				3A1F9492269056A40074F4FB /* SetupViewPresenter.swift */,
+				3A1F9493269056A40074F4FB /* SetupViewViewController.swift */,
+			);
+			path = SetupView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -328,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A1F9476269052DB0074F4FB /* UIView.swift in Sources */,
+				3A1F94AE269056A40074F4FB /* SetupViewProtocols.swift in Sources */,
 				3A1F94452690523D0074F4FB /* Result.swift in Sources */,
 				3A1F944A2690523D0074F4FB /* NetworkConstants.swift in Sources */,
 				3A1F946D269052DB0074F4FB /* EmptyViewState.swift in Sources */,
@@ -351,7 +383,11 @@
 				3A1F9479269052DB0074F4FB /* UITableView.swift in Sources */,
 				3A1F9477269052DB0074F4FB /* UIViewExtension.swift in Sources */,
 				3A1F9478269052DB0074F4FB /* UICollectionView.swift in Sources */,
+				3A1F94B1269056A40074F4FB /* SetupViewPresenter.swift in Sources */,
+				3A1F94AF269056A40074F4FB /* SetupViewRouter.swift in Sources */,
+				3A1F94B0269056A40074F4FB /* SetupViewInteractor.swift in Sources */,
 				3A1F946E269052DB0074F4FB /* ImageManager.swift in Sources */,
+				3A1F94B2269056A40074F4FB /* SetupViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
