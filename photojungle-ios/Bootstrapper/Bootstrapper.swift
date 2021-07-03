@@ -52,9 +52,9 @@ extension Bootstrapper {
     }
     
     private func showHome() {
-        //        let controller = HomeRouter.createModule()
-        //        let navigationController = UINavigationController(rootViewController: controller)
-        //        self.window.rootViewController = navigationController
+        let controller = HomeRouter.createModule()
+        let navigationController = UINavigationController(rootViewController: controller)
+        self.window.rootViewController = navigationController
     }
 }
 

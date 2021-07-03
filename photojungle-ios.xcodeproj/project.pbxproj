@@ -27,8 +27,8 @@
 		3A1F9470269052DB0074F4FB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F9459269052DA0074F4FB /* CardView.swift */; };
 		3A1F9471269052DB0074F4FB /* SetupProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F945B269052DA0074F4FB /* SetupProtocols.swift */; };
 		3A1F9473269052DB0074F4FB /* Bootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F945F269052DB0074F4FB /* Bootstrapper.swift */; };
-		3A1F9474269052DB0074F4FB /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1F9462269052DB0074F4FB /* EmptyView.xib */; };
-		3A1F9475269052DB0074F4FB /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F9463269052DB0074F4FB /* EmptyView.swift */; };
+		3A1F9474269052DB0074F4FB /* ErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1F9462269052DB0074F4FB /* ErrorView.xib */; };
+		3A1F9475269052DB0074F4FB /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F9463269052DB0074F4FB /* ErrorView.swift */; };
 		3A1F9476269052DB0074F4FB /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F9465269052DB0074F4FB /* UIView.swift */; };
 		3A1F9477269052DB0074F4FB /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F9466269052DB0074F4FB /* UIViewExtension.swift */; };
 		3A1F9478269052DB0074F4FB /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F9467269052DB0074F4FB /* UICollectionView.swift */; };
@@ -41,6 +41,11 @@
 		3A1F94B0269056A40074F4FB /* SetupViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F9491269056A40074F4FB /* SetupViewInteractor.swift */; };
 		3A1F94B1269056A40074F4FB /* SetupViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F9492269056A40074F4FB /* SetupViewPresenter.swift */; };
 		3A1F94B2269056A40074F4FB /* SetupViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F9493269056A40074F4FB /* SetupViewViewController.swift */; };
+		3A1F94D1269068970074F4FB /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F94C9269068970074F4FB /* HomeInteractor.swift */; };
+		3A1F94D2269068970074F4FB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F94CA269068970074F4FB /* HomeViewController.swift */; };
+		3A1F94D3269068970074F4FB /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F94CB269068970074F4FB /* HomeRouter.swift */; };
+		3A1F94D4269068970074F4FB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F94CC269068970074F4FB /* HomePresenter.swift */; };
+		3A1F94D5269068970074F4FB /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F94CD269068970074F4FB /* HomeProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,8 +71,8 @@
 		3A1F9459269052DA0074F4FB /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3A1F945B269052DA0074F4FB /* SetupProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupProtocols.swift; sourceTree = "<group>"; };
 		3A1F945F269052DB0074F4FB /* Bootstrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bootstrapper.swift; sourceTree = "<group>"; };
-		3A1F9462269052DB0074F4FB /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
-		3A1F9463269052DB0074F4FB /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		3A1F9462269052DB0074F4FB /* ErrorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ErrorView.xib; sourceTree = "<group>"; };
+		3A1F9463269052DB0074F4FB /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		3A1F9465269052DB0074F4FB /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		3A1F9466269052DB0074F4FB /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		3A1F9467269052DB0074F4FB /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
@@ -80,6 +85,11 @@
 		3A1F9491269056A40074F4FB /* SetupViewInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewInteractor.swift; sourceTree = "<group>"; };
 		3A1F9492269056A40074F4FB /* SetupViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewPresenter.swift; sourceTree = "<group>"; };
 		3A1F9493269056A40074F4FB /* SetupViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewViewController.swift; sourceTree = "<group>"; };
+		3A1F94C9269068970074F4FB /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		3A1F94CA269068970074F4FB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3A1F94CB269068970074F4FB /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		3A1F94CC269068970074F4FB /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		3A1F94CD269068970074F4FB /* HomeProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,8 +173,8 @@
 		3A1F9450269052DA0074F4FB /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				3A1F9451269052DA0074F4FB /* StoryBoard.swift */,
 				3A1F9452269052DA0074F4FB /* EmptyViewState.swift */,
+				3A1F9451269052DA0074F4FB /* StoryBoard.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -238,8 +248,8 @@
 		3A1F9461269052DB0074F4FB /* EmptyView */ = {
 			isa = PBXGroup;
 			children = (
-				3A1F9462269052DB0074F4FB /* EmptyView.xib */,
-				3A1F9463269052DB0074F4FB /* EmptyView.swift */,
+				3A1F9463269052DB0074F4FB /* ErrorView.swift */,
+				3A1F9462269052DB0074F4FB /* ErrorView.xib */,
 			);
 			path = EmptyView;
 			sourceTree = "<group>";
@@ -247,13 +257,13 @@
 		3A1F9464269052DB0074F4FB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				3A1F9465269052DB0074F4FB /* UIView.swift */,
-				3A1F9466269052DB0074F4FB /* UIViewExtension.swift */,
-				3A1F9467269052DB0074F4FB /* UICollectionView.swift */,
-				3A1F9468269052DB0074F4FB /* UITableView.swift */,
-				3A1F9469269052DB0074F4FB /* UIViewController.swift */,
 				3A1F946A269052DB0074F4FB /* Miscellaneous.swift */,
+				3A1F9467269052DB0074F4FB /* UICollectionView.swift */,
 				3A1F946B269052DB0074F4FB /* UIStoryboard.swift */,
+				3A1F9468269052DB0074F4FB /* UITableView.swift */,
+				3A1F9465269052DB0074F4FB /* UIView.swift */,
+				3A1F9469269052DB0074F4FB /* UIViewController.swift */,
+				3A1F9466269052DB0074F4FB /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -270,6 +280,7 @@
 		3A1F9482269056A40074F4FB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3A1F94C3269068970074F4FB /* Home */,
 				3A1F948E269056A40074F4FB /* SetupView */,
 			);
 			path = Modules;
@@ -278,13 +289,25 @@
 		3A1F948E269056A40074F4FB /* SetupView */ = {
 			isa = PBXGroup;
 			children = (
-				3A1F948F269056A40074F4FB /* SetupViewProtocols.swift */,
-				3A1F9490269056A40074F4FB /* SetupViewRouter.swift */,
 				3A1F9491269056A40074F4FB /* SetupViewInteractor.swift */,
 				3A1F9492269056A40074F4FB /* SetupViewPresenter.swift */,
+				3A1F948F269056A40074F4FB /* SetupViewProtocols.swift */,
+				3A1F9490269056A40074F4FB /* SetupViewRouter.swift */,
 				3A1F9493269056A40074F4FB /* SetupViewViewController.swift */,
 			);
 			path = SetupView;
+			sourceTree = "<group>";
+		};
+		3A1F94C3269068970074F4FB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3A1F94C9269068970074F4FB /* HomeInteractor.swift */,
+				3A1F94CC269068970074F4FB /* HomePresenter.swift */,
+				3A1F94CD269068970074F4FB /* HomeProtocols.swift */,
+				3A1F94CB269068970074F4FB /* HomeRouter.swift */,
+				3A1F94CA269068970074F4FB /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,7 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A1F9474269052DB0074F4FB /* EmptyView.xib in Resources */,
+				3A1F9474269052DB0074F4FB /* ErrorView.xib in Resources */,
 				3A1F92FC268DAD470074F4FB /* LaunchScreen.storyboard in Resources */,
 				3A1F92F9268DAD470074F4FB /* Assets.xcassets in Resources */,
 				3A1F92F7268DAD460074F4FB /* Main.storyboard in Resources */,
@@ -361,13 +384,18 @@
 				3A1F9476269052DB0074F4FB /* UIView.swift in Sources */,
 				3A1F94AE269056A40074F4FB /* SetupViewProtocols.swift in Sources */,
 				3A1F94452690523D0074F4FB /* Result.swift in Sources */,
+				3A1F94D2269068970074F4FB /* HomeViewController.swift in Sources */,
 				3A1F944A2690523D0074F4FB /* NetworkConstants.swift in Sources */,
 				3A1F946D269052DB0074F4FB /* EmptyViewState.swift in Sources */,
 				3A1F946C269052DB0074F4FB /* StoryBoard.swift in Sources */,
+				3A1F94D5269068970074F4FB /* HomeProtocols.swift in Sources */,
+				3A1F94D3269068970074F4FB /* HomeRouter.swift in Sources */,
 				3A1F9471269052DB0074F4FB /* SetupProtocols.swift in Sources */,
-				3A1F9475269052DB0074F4FB /* EmptyView.swift in Sources */,
+				3A1F9475269052DB0074F4FB /* ErrorView.swift in Sources */,
 				3A1F9470269052DB0074F4FB /* CardView.swift in Sources */,
 				3A1F9473269052DB0074F4FB /* Bootstrapper.swift in Sources */,
+				3A1F94D1269068970074F4FB /* HomeInteractor.swift in Sources */,
+				3A1F94D4269068970074F4FB /* HomePresenter.swift in Sources */,
 				3A1F94422690523D0074F4FB /* ApiManager.swift in Sources */,
 				3A1F94492690523D0074F4FB /* ApiResponse.swift in Sources */,
 				3A1F947B269052DB0074F4FB /* Miscellaneous.swift in Sources */,

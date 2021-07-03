@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Items: Codable {
+
+    func getViewModel() -> ItemViewModel {
+        ItemViewModel()
+    }
+
+}

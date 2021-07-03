@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK: This View Help Us To Show The Message To The Users.
-class EmptyView: UIView {
+class ErrorView: UIView {
     
     // MARK: - IBOutlets -
     @IBOutlet weak var viewImage: UIImageView!
@@ -16,16 +16,16 @@ class EmptyView: UIView {
     @IBOutlet weak var subTitleLabel: UILabel!
 }
 
-extension EmptyView {
+extension ErrorView {
     
     class func addEmptyView(in view: UIView,
                             state: EmptyViewState,
                             errorMessage: String? = nil) {
-        guard let emptyView = EmptyView.loadFromXib() as? EmptyView else { return }
+        guard let emptyView = ErrorView.loadFromXib() as? ErrorView else { return }
         // MARK: Removing EmptyView if added before
-        EmptyView.removeEmptyView(from: view)
+        ErrorView.removeEmptyView(from: view)
         emptyView.tag = 1001
-        emptyView.backgroundColor = .white
+        // emptyView.backgroundColor = .white
         emptyView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         emptyView.viewImage.image = UIImage(named: state.image)
         emptyView.titleLabel.text = state.title
