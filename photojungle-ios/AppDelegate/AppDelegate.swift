@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  photojungle-ios
+//  PhotoJungle-iOS
 //
-//  Created by Kanji on 01/07/2021.
+//  Created by HasnainKanji on 01/07/2021.
 //
 
 import UIKit
