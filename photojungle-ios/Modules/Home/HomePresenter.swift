@@ -13,15 +13,17 @@ struct ItemViewModel {
 
 final class HomePresenter {
     
-    weak private var view: HomeViewProtocol?
-    var interactor: HomeInteractorInputProtocol?
+    weak private var view: HomeViewProtocol!
+    var interactor: HomeInteractorInputProtocol!
     private let router: HomeWireframeProtocol
     
+    private var itemsData = [Items]()
+    private var pageNumber = 1
     private var isFetchingContent = false
-    var itemsData = [Items]()
+
     
     init(interface: HomeViewProtocol,
-         interactor: HomeInteractorInputProtocol?,
+         interactor: HomeInteractorInputProtocol,
          router: HomeWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
@@ -35,7 +37,16 @@ extension HomePresenter: HomePresenterProtocol {
         // MARK: isFetchingContent Help To Stop If user tries to use pull to refresh twice
         guard !isFetchingContent else { return }
         isFetchingContent = true
-        interactor?.getItemsFromServer(pageNumber: "1")
+        interactor?.getItemsFromServer(pageNumber: "\(pageNumber)")
+    }
+
+    func getNextPageData() {
+        guard !isFetchingContent, pageNumber > 1,
+              !itemsData.isEmpty else {
+            return
+        }
+        isFetchingContent = true
+        interactor?.getItemsFromServer(pageNumber: "\(pageNumber)")
     }
     
     func getCellDetails(at indexPath: IndexPath) -> ItemViewModel? {
@@ -60,8 +71,9 @@ extension HomePresenter: HomeInteractorOutputProtocol {
     
     // MARK: After Items are fetch, view is refresh and error view is removed in case shown
     func itemsFetchedSucessfully(_ itemsData: [Items]) {
-        self.itemsData = itemsData
+        self.itemsData.append(contentsOf: itemsData)
         self.isFetchingContent = false
+        !itemsData.isEmpty ? (self.pageNumber += 1) : ()
         DispatchQueue.main.async {
             // MARK: In case data items are empty error is shown on screen
             !itemsData.isEmpty ? self.view?.removeErrorView() : self.view?.showError(with: "No Data Found")
