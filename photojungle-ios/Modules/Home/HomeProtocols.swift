@@ -14,9 +14,10 @@ protocol HomeWireframeProtocol: class {
 // MARK: Presenter -
 protocol HomePresenterProtocol: class {
     
-    var interactor: HomeInteractorInputProtocol? { get set }
+    var interactor: HomeInteractorInputProtocol! { get set }
     
     func getData()
+    func getNextPageData()
     func getCellDetails(at indexPath: IndexPath) -> ItemViewModel?
     func getRowCount() -> Int
     func didSelectItem(at indexPath: IndexPath)
@@ -33,7 +34,7 @@ protocol HomeInteractorOutputProtocol: class {
 
 protocol HomeInteractorInputProtocol: class {
     
-    var presenter: HomeInteractorOutputProtocol? { get set }
+    var presenter: HomeInteractorOutputProtocol! { get set }
     
     /* Presenter -> Interactor */
     func getItemsFromServer(pageNumber page: String)
