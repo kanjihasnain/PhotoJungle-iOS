@@ -8,6 +8,7 @@
 import UIKit
 
 struct ItemViewModel {
+    var thumbnailsUrl: String
 }
 
 final class HomePresenter {
@@ -59,13 +60,13 @@ extension HomePresenter: HomeInteractorOutputProtocol {
     
     // MARK: After Items are fetch, view is refresh and error view is removed in case shown
     func itemsFetchedSucessfully(_ itemsData: [Items]) {
-        //        self.itemsData = itemsData
-        //        self.isFetchingContent = false
-        //        DispatchQueue.main.async {
-        //            // MARK: In case data items are empty error is shown on screen
-        //            !itemsData.isEmpty ? self.view?.removeEmptyView() : self.view?.showError(with: "No Data Found")
-        //            self.view?.reloadView()
-        //        }
+        self.itemsData = itemsData
+        self.isFetchingContent = false
+        DispatchQueue.main.async {
+            // MARK: In case data items are empty error is shown on screen
+            !itemsData.isEmpty ? self.view?.removeErrorView() : self.view?.showError(with: "No Data Found")
+            self.view?.reloadView()
+        }
     }
     
     func showError(with message: String) {
@@ -81,7 +82,7 @@ extension HomePresenter: HomeInteractorOutputProtocol {
             self.view?.reloadView()
             // MARK: Before showing a generic message, checking if error is caused by network loss
             if self.itemsData.isEmpty {
-                !isInternetAvailable() ? self.view?.addEmptyView(.noInternet) : self.view?.addEmptyView(.somethingWrong)
+                !isInternetAvailable() ? self.view?.addErrorView(state: .noInternet) : self.view?.addErrorView(state: .somethingWrong)
             }
             self.isFetchingContent = false
         }

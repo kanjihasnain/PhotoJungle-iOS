@@ -1,48 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Setup View View Controller-->
         <scene sceneID="iTi-H3-ojU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bZz-AM-aRj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SetupViewViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r7V-oq-Pr4" customClass="SetupViewViewController" customModule="photojungle_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="siv-0b-6nF"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Kh-4A-uan"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BuC-FY-bEv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="SeD-eE-a97">
-                                <rect key="frame" x="140" y="363" width="134" height="134.5"/>
+                                <rect key="frame" x="140" y="358.5" width="134" height="134.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SeD-eE-a97" secondAttribute="height" multiplier="1:1" id="po6-l4-mWN"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Jungle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDe-f0-0tf">
-                                <rect key="frame" x="125.5" y="517.5" width="163.5" height="33.5"/>
+                                <rect key="frame" x="125.5" y="513" width="163.5" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="sNc-hg-aws"/>
                         <color key="backgroundColor" name="BgColor"/>
                         <constraints>
                             <constraint firstItem="SeD-eE-a97" firstAttribute="height" secondItem="BuC-FY-bEv" secondAttribute="height" multiplier="0.15" id="InC-8X-Jsc"/>
-                            <constraint firstItem="pDe-f0-0tf" firstAttribute="centerX" secondItem="sNc-hg-aws" secondAttribute="centerX" id="IyN-UP-yey"/>
-                            <constraint firstItem="SeD-eE-a97" firstAttribute="centerX" secondItem="sNc-hg-aws" secondAttribute="centerX" id="KGO-i0-qct"/>
+                            <constraint firstItem="pDe-f0-0tf" firstAttribute="centerX" secondItem="BuC-FY-bEv" secondAttribute="centerX" id="IyN-UP-yey"/>
+                            <constraint firstItem="SeD-eE-a97" firstAttribute="centerX" secondItem="BuC-FY-bEv" secondAttribute="centerX" id="KGO-i0-qct"/>
                             <constraint firstItem="pDe-f0-0tf" firstAttribute="centerX" secondItem="SeD-eE-a97" secondAttribute="centerX" id="Xdl-yo-HHP"/>
-                            <constraint firstItem="SeD-eE-a97" firstAttribute="centerY" secondItem="sNc-hg-aws" secondAttribute="centerY" multiplier="0.95" id="Zu9-7K-S8I"/>
+                            <constraint firstItem="SeD-eE-a97" firstAttribute="centerY" secondItem="BuC-FY-bEv" secondAttribute="centerY" multiplier="0.95" id="Zu9-7K-S8I"/>
                             <constraint firstItem="pDe-f0-0tf" firstAttribute="top" secondItem="SeD-eE-a97" secondAttribute="bottom" constant="20" id="mCd-ds-2Lh"/>
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bZz-AM-aRj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-807" y="108"/>
         </scene>
@@ -50,22 +53,43 @@
         <scene sceneID="gtn-HM-iel">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h04-wP-5aw" customClass="HomeViewController" customModule="photojungle_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7r4-VX-DRI"/>
+                        <viewControllerLayoutGuide type="bottom" id="TSa-an-rpy"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lAe-Ia-f6F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="LlI-us-YgA"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SLj-sP-JM7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" name="BgColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SLj-sP-JM7" secondAttribute="trailing" id="1Dz-va-lMI"/>
+                            <constraint firstAttribute="bottom" secondItem="SLj-sP-JM7" secondAttribute="bottom" id="VLZ-dK-kMb"/>
+                            <constraint firstItem="SLj-sP-JM7" firstAttribute="top" secondItem="lAe-Ia-f6F" secondAttribute="top" id="cPJ-RX-mTe"/>
+                            <constraint firstItem="SLj-sP-JM7" firstAttribute="leading" secondItem="lAe-Ia-f6F" secondAttribute="leading" id="vCd-Yu-kiM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="SLj-sP-JM7" id="cES-hF-egb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cr1-YM-Qxt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="175" y="108"/>
+            <point key="canvasLocation" x="173.91304347826087" y="107.8125"/>
         </scene>
     </scenes>
     <resources>
         <image name="logo" width="848" height="848"/>
         <namedColor name="BgColor">
-            <color red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.87800002098083496" green="0.87800002098083496" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

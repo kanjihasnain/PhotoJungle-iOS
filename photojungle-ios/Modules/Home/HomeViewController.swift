@@ -10,10 +10,11 @@ import UIKit
 final class HomeViewController: UIViewController {
     
     // MARK: - Public properties -
-    var presenter: HomePresenterProtocol?
+    var presenter: HomePresenterProtocol!
     
     // MARK: - IBOutlets -
-    
+    @IBOutlet weak var tableView: UITableView!
+
     // MARK: - Class properties -
     private let refreshControl = UIRefreshControl()
     
@@ -36,10 +37,12 @@ extension HomeViewController {
     private func setupRefreshControl() {
         refreshControl.addTarget(self, action: #selector(refreshAndGetData), for: .valueChanged)
         refreshControl.tintColor = .darkGray
+        tableView.alwaysBounceVertical = true
+        tableView.refreshControl = refreshControl
     }
     
     @objc private func refreshAndGetData() {
-        removeEmptyView()
+        removeErrorView()
         presenter?.getData()
     }
 }
@@ -47,9 +50,11 @@ extension HomeViewController {
 extension HomeViewController: HomeViewProtocol {
     
     func reloadView() {
+        tableView.refreshControl?.endRefreshing()
+        tableView.reloadData()
     }
     
-    func addEmptyView(_ state: EmptyViewState) {
+    func addErrorView(state: EmptyViewState) {
         ErrorView.addEmptyView(in: self.view, state: state)
     }
     
@@ -57,18 +62,27 @@ extension HomeViewController: HomeViewProtocol {
         ErrorView.addEmptyView(in: self.view, state: .error, errorMessage: message)
     }
     
-    func removeEmptyView() {
-        ErrorView.removeEmptyView(from: self.view)
+    func removeErrorView() {
+        ErrorView.removeView(from: self.view)
     }
 }
 
 extension HomeViewController: SetupViewController {
     
     func setupNavigation() {
-        self.navigationController?.navigationBar.isHidden = true
+        //.navigationController?.navigationBar.isHidden = true
+        title = "Photo Feed"
     }
     
     func setupView() {
+
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 44
+        tableView.estimatedRowHeight = UITableView.automaticDimension
+        tableView.tableFooterView = UIView()
+        tableView.register(cellType: HomeTableViewCell.self)
+
         setupRefreshControl()
     }
     

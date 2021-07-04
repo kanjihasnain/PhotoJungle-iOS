@@ -32,3 +32,7 @@ func isInternetAvailable() -> Bool {
     let needsConnection = flags.contains(.connectionRequired)
     return (isReachable && !needsConnection)
 }
+
+func getDeviceSizeDetails() -> CGRect {
+    return UIScreen.main.bounds
+}

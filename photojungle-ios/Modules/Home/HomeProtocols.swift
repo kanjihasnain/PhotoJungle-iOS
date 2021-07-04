@@ -42,11 +42,11 @@ protocol HomeInteractorInputProtocol: class {
 // MARK: View -
 protocol HomeViewProtocol: class {
     
-    var presenter: HomePresenterProtocol? { get set }
+    var presenter: HomePresenterProtocol! { get set }
     
     /* Presenter -> ViewController */
-    func addEmptyView(_ state: EmptyViewState)
+    func addErrorView(state: EmptyViewState)
     func showError(with message: String)
-    func removeEmptyView()
+    func removeErrorView()
     func reloadView()
 }
