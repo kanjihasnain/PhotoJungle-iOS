@@ -42,7 +42,7 @@ protocol HomeInteractorInputProtocol: class {
 // MARK: View -
 protocol HomeViewProtocol: class {
     
-    var presenter: HomePresenterProtocol? { get set }
+    var presenter: HomePresenterProtocol! { get set }
     
     /* Presenter -> ViewController */
     func addErrorView(state: EmptyViewState)
