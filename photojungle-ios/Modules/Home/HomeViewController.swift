@@ -78,10 +78,10 @@ extension HomeViewController: SetupViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.estimatedRowHeight = 100
-        tableView.rowHeight = 100
+        tableView.rowHeight = 44
+        tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
-        //tableView.register(cellType: HomeCollectionViewCell.self)
+        tableView.register(cellType: HomeTableViewCell.self)
 
         setupRefreshControl()
     }

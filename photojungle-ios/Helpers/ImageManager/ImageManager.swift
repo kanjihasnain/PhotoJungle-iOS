@@ -9,4 +9,13 @@ import Foundation
 import UIKit
 
 class ImageManager {
+
+    static let imageCacher = ImageCacher()
+    static var shared = ImageManager()
+
+    private init () { }
+
+    func setImage(with url: String, imageView: UIImageView) {
+        ImageManager.imageCacher.downloadAndShowImage(from: url, on: imageView)
+    }
 }

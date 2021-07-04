@@ -8,6 +8,7 @@
 import UIKit
 
 struct ItemViewModel {
+    var thumbnailsUrl: String
 }
 
 final class HomePresenter {

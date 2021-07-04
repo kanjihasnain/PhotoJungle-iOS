@@ -49,6 +49,8 @@
 		3ACA1B032691F1010085C857 /* Home+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA1B022691F1010085C857 /* Home+TableView.swift */; };
 		3ACA1B0B2691F2480085C857 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACA1B092691F2480085C857 /* HomeTableViewCell.swift */; };
 		3ACA1B0C2691F2480085C857 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ACA1B0A2691F2480085C857 /* HomeTableViewCell.xib */; };
+		3AE6554D2691F62300140BA7 /* ImageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6554B2691F62200140BA7 /* ImageObject.swift */; };
+		3AE6554E2691F62300140BA7 /* ImageCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6554C2691F62300140BA7 /* ImageCacher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +98,8 @@
 		3ACA1B022691F1010085C857 /* Home+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+TableView.swift"; sourceTree = "<group>"; };
 		3ACA1B092691F2480085C857 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		3ACA1B0A2691F2480085C857 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		3AE6554B2691F62200140BA7 /* ImageObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageObject.swift; sourceTree = "<group>"; };
+		3AE6554C2691F62300140BA7 /* ImageCacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +202,8 @@
 		3A1F9454269052DA0074F4FB /* ImageManager */ = {
 			isa = PBXGroup;
 			children = (
+				3AE6554C2691F62300140BA7 /* ImageCacher.swift */,
+				3AE6554B2691F62200140BA7 /* ImageObject.swift */,
 				3A1F9455269052DA0074F4FB /* ImageManager.swift */,
 			);
 			path = ImageManager;
@@ -413,6 +419,7 @@
 				3A1F94D2269068970074F4FB /* HomeViewController.swift in Sources */,
 				3A1F944A2690523D0074F4FB /* NetworkConstants.swift in Sources */,
 				3A1F946D269052DB0074F4FB /* EmptyViewState.swift in Sources */,
+				3AE6554D2691F62300140BA7 /* ImageObject.swift in Sources */,
 				3A1F946C269052DB0074F4FB /* StoryBoard.swift in Sources */,
 				3A1F94D5269068970074F4FB /* HomeProtocols.swift in Sources */,
 				3A1F94D3269068970074F4FB /* HomeRouter.swift in Sources */,
@@ -423,6 +430,7 @@
 				3A1F9473269052DB0074F4FB /* Bootstrapper.swift in Sources */,
 				3A1F94D1269068970074F4FB /* HomeInteractor.swift in Sources */,
 				3A1F94D4269068970074F4FB /* HomePresenter.swift in Sources */,
+				3AE6554E2691F62300140BA7 /* ImageCacher.swift in Sources */,
 				3A1F94422690523D0074F4FB /* ApiManager.swift in Sources */,
 				3A1F94492690523D0074F4FB /* ApiResponse.swift in Sources */,
 				3ACA1B0B2691F2480085C857 /* HomeTableViewCell.swift in Sources */,

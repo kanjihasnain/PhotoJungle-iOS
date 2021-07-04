@@ -17,11 +17,12 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-        //        let cell = tableView.dequeueReusableCell(with: SingleTextFieldTableViewCell.self, for: indexPath)
-        //        cell.cellType = forType
-        //        cell.configureCell(object: self.presenter?.getFieldValue(forType))
-        //        cell.delegate = self
-        //        return cell
+        let cell = tableView.dequeueReusableCell(with: HomeTableViewCell.self, for: indexPath)
+        cell.viewModel = presenter.getCellDetails(at: indexPath)
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 275
     }
 }

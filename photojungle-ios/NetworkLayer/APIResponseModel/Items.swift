@@ -8,30 +8,30 @@
 import Foundation
 
 struct Items: Codable {
-
-   var collections : Int?
-   var comments : Int?
-   var downloads : Int?
-   var id : Int?
-   var imageHeight : Int?
-   var imageSize : Int?
-   var imageWidth : Int?
-   var largeImageURL : String?
-   var likes : Int?
-   var pageURL : String?
-   var previewHeight : Int?
-   var previewURL : String?
-   var previewWidth : Int?
-   var tags : String?
-   var type : String?
-   var user : String?
-   var userImageURL : String?
-   var userId : Int?
-   var views : Int?
-   var webformatHeight : Int?
-   var webformatURL : String?
-   var webformatWidth : Int?
-
+    
+    var collections : Int?
+    var comments : Int?
+    var downloads : Int?
+    var id : Int?
+    var imageHeight : Int?
+    var imageSize : Int?
+    var imageWidth : Int?
+    var largeImageURL : String?
+    var likes : Int?
+    var pageURL : String?
+    var previewHeight : Int?
+    var previewURL : String?
+    var previewWidth : Int?
+    var tags : String?
+    var type : String?
+    var user : String?
+    var userImageURL : String?
+    var userId : Int?
+    var views : Int?
+    var webformatHeight : Int?
+    var webformatURL : String?
+    var webformatWidth : Int?
+    
     enum CodingKeys: String, CodingKey {
         case collections = "collections"
         case comments = "comments"
@@ -56,7 +56,7 @@ struct Items: Codable {
         case webformatURL = "webformatURL"
         case webformatWidth = "webformatWidth"
     }
-
+    
     init(from decoder: Decoder) throws {
         do {
             let values = try decoder.container(keyedBy: CodingKeys.self)
@@ -90,8 +90,8 @@ struct Items: Codable {
             print(error.localizedDescription)
         }
     }
-
+    
     func getViewModel() -> ItemViewModel {
-        ItemViewModel()
+        ItemViewModel(thumbnailsUrl: webformatURL ?? "")
     }
 }
