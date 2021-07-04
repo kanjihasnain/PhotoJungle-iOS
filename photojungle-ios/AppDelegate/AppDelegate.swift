@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  photojungle-ios
+//  PhotoJungle-iOS
 //
-//  Created by Kanji on 01/07/2021.
+//  Created by HasnainKanji on 01/07/2021.
 //
 
 import UIKit
@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    Bootstrapper.initialize(launchOptions)
     return true
   }
 }
