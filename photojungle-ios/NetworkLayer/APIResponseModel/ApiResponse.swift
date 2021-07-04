@@ -13,7 +13,7 @@ class ApiResponse<T>: Codable where T: Codable {
     var results: T?
     
     enum CodingKeys: String, CodingKey {
-        case results
+        case results = "hits"
         case message
     }
     

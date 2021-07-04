@@ -23,7 +23,7 @@ extension ErrorView {
                             errorMessage: String? = nil) {
         guard let emptyView = ErrorView.loadFromXib() as? ErrorView else { return }
         // MARK: Removing EmptyView if added before
-        ErrorView.removeEmptyView(from: view)
+        ErrorView.removeView(from: view)
         emptyView.tag = 1001
         // emptyView.backgroundColor = .white
         emptyView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
@@ -33,7 +33,7 @@ extension ErrorView {
         view.insertSubview(emptyView, at: 0)
     }
     
-    class func removeEmptyView(from view: UIView) {
+    class func removeView(from view: UIView) {
         view.subviews.forEach({
             $0.tag == 1001 ? $0.removeFromSuperview() : ()
         })

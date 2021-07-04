@@ -39,7 +39,7 @@ extension HomeViewController {
     }
     
     @objc private func refreshAndGetData() {
-        removeEmptyView()
+        removeErrorView()
         presenter?.getData()
     }
 }
@@ -49,7 +49,7 @@ extension HomeViewController: HomeViewProtocol {
     func reloadView() {
     }
     
-    func addEmptyView(_ state: EmptyViewState) {
+    func addErrorView(state: EmptyViewState) {
         ErrorView.addEmptyView(in: self.view, state: state)
     }
     
@@ -57,8 +57,8 @@ extension HomeViewController: HomeViewProtocol {
         ErrorView.addEmptyView(in: self.view, state: .error, errorMessage: message)
     }
     
-    func removeEmptyView() {
-        ErrorView.removeEmptyView(from: self.view)
+    func removeErrorView() {
+        ErrorView.removeView(from: self.view)
     }
 }
 
