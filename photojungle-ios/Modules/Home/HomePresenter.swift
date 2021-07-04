@@ -34,7 +34,7 @@ extension HomePresenter: HomePresenterProtocol {
         // MARK: isFetchingContent Help To Stop If user tries to use pull to refresh twice
         guard !isFetchingContent else { return }
         isFetchingContent = true
-        interactor?.getItemsFromServer()
+        interactor?.getItemsFromServer(pageNumber: "1")
     }
     
     func getCellDetails(at indexPath: IndexPath) -> ItemViewModel? {

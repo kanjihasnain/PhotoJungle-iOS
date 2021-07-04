@@ -36,7 +36,7 @@ protocol HomeInteractorInputProtocol: class {
     var presenter: HomeInteractorOutputProtocol? { get set }
     
     /* Presenter -> Interactor */
-    func getItemsFromServer()
+    func getItemsFromServer(pageNumber page: String)
 }
 
 // MARK: View -
